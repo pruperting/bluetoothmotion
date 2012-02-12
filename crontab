@@ -1,0 +1,3 @@
+# /etc/cron.d/bt-motion: crontab entries for the bluetooth motion script
+
+*/5 * * * *		root	/usr/local/bin/bt-motion &> /dev/null
