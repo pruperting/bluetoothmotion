@@ -1,0 +1,9 @@
+# A bash script to turn the motion detection program for Linux, motion, on and off based on the presence of a bluetooth connection. Simple as that ;)
+#It obviously requires you to have a bluetooth module on your computer that is working and that hcitool can successfully access. It obviously also requires you to have a mobile phone with bluetooth.
+#The script works my checking for the presence of your phone via bluetooth, if it doesn't detect your phone, it turns on motion, if it does detect your phone, it turns off motion.
+#v4 has been updated with various improvements from Mike Parry - cheers ;)
+#v3 has been updated to work with modern phones that can't be set to be permanently discoverable, like all Androids. Tested to work with the HTC Hero.
+#On Ubuntu 8.04 you'll have to modify the /etc/init.d/motion script, since it is currently screwed up and tries to create a pid file but doesn't have the necessary privilages. A patch is apparently in the works.
+#In the meantime, a hacky way to fix it is to add:
+#touch $PIDFILE && chown motion $PIDFILE
+#to the top of the startup script.
